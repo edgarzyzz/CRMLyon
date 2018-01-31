@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">LyonCRM</string>
+
+    <!-- Splash -->
+    <string name="txt_splash">Lyon CRM</string>
+
+    <!-- General -->
+    <string name="msg_field_obligatory">Campo obligatorio</string>
+    <string name="msg_field_must_numeric">El campo debe de ser numerico</string>
+    <string name="msg_field_must_text">El campo debe de ser texto</string>
+    <string name="msg_field_must_email">El campo debe de ser email</string>
+    <string name="msg_field_must_alphanumeric">El campo debe de ser alfanumerico</string>
+
+    <!-- Login -->
+    <string name="welcome_log">Ninja Systems</string>
+    <string name="email_log">EMAIL</string>
+    <string name="password_log">PASSWORD</string>
+    <string name="remember_me_log">Recuerdame</string>
+    <string name="login_log">Login</string>
+    <string name="forgot_password_log">Olvide mi password</string>
+
+
+    <!-- Registration -->
+    <string name="reg_title_reg">Registro</string>
+    <string name="reg_name">Nombre</string>
+    <string name="reg_last_name_p">Apellido paterno</string>
+    <string name="reg_last_name_m">Apellido materno</string>
+    <string name="reg_direction">Direccion</string>
+    <string name="reg_user_type">Puesto</string>
+    <string name="reg_phone">Telefono</string>
+    <string name="reg_profile">Perfil</string>
+    <string name="reg_register">Registrar</string>
+    <string name="reg_user_save_correct">El usuario se alameceno correctamente</string>
+    <string name="reg_user_save_incorrect">El usuario no se pudo crear</string>
+
+
+    <string name="reg_vis_title">Registro visita</string>
+    <string name="reg_vis_name">Nombre contacto</string>
+    <string name="reg_vis_adress">Direccion</string>
+    <string name="reg_vis_company">Empresa</string>
+    <string name="reg_vis_date">Fecha</string>
+    <string name="reg_vis_save">Agendar</string>
+    <string name="reg_vis_save_correct">Visita almacenada correctamente</string>
+    <string name="reg_vis_save_incorrect">La visita no se pudo almacenar</string>
+
+    <!-- ListVisits -->
+    <string name="lst_visit_title_all">Todas las Visitas</string>
+    <string name="lst_visit_title_Ok">No visitadas</string>
+    <string name="lst_visit_title_no">Visitadas</string>
+
+
+    <!--temp -->
+    <string name="temp_definition">Definir Contenido</string>
+    <string name="temp_example_date">00/00/0000</string>
+    <string name="temp_example_company">company</string>
+    <string name="temp_example_small">ExampleExample</string>
+    <string name="temp_example_medium">ExampleExampleExampleExample</string>
+    <string name="temp_example_big">ExampleExampleExampleExampleExampleExampleExampleExampleExampleExampleExampleExample</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_profile">Perfil</string>
+    <string name="action_visit">Visita</string>
+    <string name="action_user">Usuario</string>
+    <string name="action_sesion">Cerrar Sesion</string>
+
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MidnightBlue"
+    tools:context="com.ninja.mexico.ui.activity.MainSupervisorActivity">
+
+    <include layout="@layout/toolbar_lyon"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/temp_definition"
+        android:textSize="24dp"/>
+
+</LinearLayout>

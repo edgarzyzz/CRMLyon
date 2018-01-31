@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ninja.mexico.ui.fragments.RegistrationUserFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/reg_title_reg"
+            android:textSize="50dp"
+            android:layout_margin="20dp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            style="@style/tv_registration"
+            android:text="@string/reg_name"/>
+        <EditText
+            android:id="@+id/etNameRegUser"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_name"/>
+        <TextView
+            style="@style/tv_registration"
+            android:text="@string/reg_last_name_p"/>
+        <EditText
+            android:id="@+id/etLastNameOneRegUser"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_last_name_p"/>
+        <TextView
+            style="@style/tv_registration"
+            android:text="@string/reg_last_name_m"/>
+        <EditText
+            android:id="@+id/etLastNameTwoRegUser"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_last_name_m"/>
+        <TextView
+            style="@style/tv_registration"
+            android:text="@string/reg_direction"/>
+        <EditText
+            android:id="@+id/etAdressRegUser"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_direction"/>
+
+
+        <TextView
+            style="@style/tv_registration"
+            android:text="@string/reg_user_type"/>
+        <EditText
+            android:id="@+id/etPositionRegUser"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_user_type"/>
+        <TextView
+            style="@style/tv_registration"
+            android:text="@string/reg_phone"/>
+        <EditText
+            android:id="@+id/etPhoneRegUser"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_phone"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/tv_registration"
+                android:layout_weight="2"
+                android:visibility="visible"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:textStyle="normal"
+                android:text= "@string/reg_profile"/>
+            <Spinner
+                android:id="@+id/spTypePerfilRegUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/matchparent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btnRegisterRegUser"
+            style="@style/buttonLyon"
+            android:text="@string/reg_register"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

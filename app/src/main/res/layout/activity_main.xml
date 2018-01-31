@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context="com.ninja.mexico.ui.activity.LoginActivity">
+
+
+    <LinearLayout
+        style="@style/matchparent"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/matchparent"
+            android:layout_margin="40dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            style="@style/match_wrap"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="@string/welcome_log"
+            android:textColor="@color/blue_lyon"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/matchparent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etMailLog"
+            style="@style/editxt_log"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:hint="@string/email_log"
+            android:text="prom"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/etPasswordLog"
+            style="@style/editxt_log"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:text="abc"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:hint="@string/password_log"
+            />
+
+        <CheckBox
+            android:id="@+id/chkRememberLog"
+            style="@style/match_wrap"
+            android:text="@string/remember_me_log"
+            android:textColor="@color/blue_lyon"
+            android:buttonTint="@color/blue_lyon"
+
+            />
+
+        <Button
+            android:id="@+id/btnLoginLog"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_edittxt_log"
+            android:layout_gravity="center"
+            android:text="@string/login_log"
+            android:textColor="@color/blue_lyon" />
+
+        <TextView
+            android:id="@+id/tvForgotLog"
+            style="@style/match_wrap"
+            android:gravity="center"
+            android:text="@string/forgot_password_log"
+            android:textColor="@color/blue_lyon" />
+    </LinearLayout>
+
+
+</LinearLayout>

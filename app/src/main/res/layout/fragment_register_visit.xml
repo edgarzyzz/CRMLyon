@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ninja.mexico.ui.fragments.RegisterVisitFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/reg_vis_title"
+            android:textSize="50dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/tv_registration"
+            android:text="@string/reg_vis_name" />
+
+        <EditText
+            android:id="@+id/etNameContactRegVis"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_vis_name" />
+
+        <TextView
+            style="@style/tv_registration"
+            android:text="@string/reg_vis_adress" />
+
+        <EditText
+            android:id="@+id/etAdressRegVis"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_vis_adress" />
+
+        <TextView
+            style="@style/tv_registration"
+            android:text="@string/reg_vis_company" />
+
+        <EditText
+            android:id="@+id/etCompanyRegVis"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_vis_company" />
+
+        <TextView
+            style="@style/tv_registration"
+            android:text="@string/reg_vis_date" />
+
+        <EditText
+            android:id="@+id/etscheduledDateRegVis"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_vis_date" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/matchparent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnAceptRegVis"
+            style="@style/buttonLyon"
+            android:text="@string/reg_vis_save" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
