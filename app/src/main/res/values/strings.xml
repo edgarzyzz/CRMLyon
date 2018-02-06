@@ -18,20 +18,28 @@
     <string name="remember_me_log">Recuerdame</string>
     <string name="login_log">Login</string>
     <string name="forgot_password_log">Olvide mi password</string>
+    <string name="data_incorrect">Datos incorrectos</string>
 
 
     <!-- Registration -->
+    <string name="reg_"></string>
     <string name="reg_title_reg">Registro</string>
     <string name="reg_name">Nombre</string>
-    <string name="reg_last_name_p">Apellido paterno</string>
-    <string name="reg_last_name_m">Apellido materno</string>
-    <string name="reg_direction">Direccion</string>
-    <string name="reg_user_type">Puesto</string>
-    <string name="reg_phone">Telefono</string>
-    <string name="reg_profile">Perfil</string>
+    <string name="reg_last_name_one">Apellido paterno</string>
+    <string name="reg_last_name_two">Apellido materno</string>
+    <string name="reg_eMail">Correo electronico</string>
+    <string name="reg_password">Password</string>
+    <string name="reg_position">Cargo</string>
+    <string name="reg_profile">perfil</string>
+    <string name="reg_nickname">Alias</string>
+    <string name="reg_officePhone">Telefono oficina</string>
+    <string name="reg_cellPhone">Telefono celular</string>
+    <string name="reg_webSite">Sitio web</string>
+    <string name="reg_fax">Fax</string>
+    <string name="reg_birthdate">Fecha de nacimiento</string>
     <string name="reg_register">Registrar</string>
     <string name="reg_user_save_correct">El usuario se alameceno correctamente</string>
-    <string name="reg_user_save_incorrect">El usuario no se pudo crear</string>
+    <string name="reg_user_save_incorrect">El usuario no se pudo almacenar</string>
 
 
     <string name="reg_vis_title">Registro visita</string>

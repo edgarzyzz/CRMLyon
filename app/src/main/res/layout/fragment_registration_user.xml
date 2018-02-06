@@ -8,7 +8,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -25,54 +26,70 @@
         android:orientation="vertical">
         <TextView
             style="@style/tv_registration"
-            android:text="@string/reg_name"/>
+            android:text="@string/temp_example_small"/>
         <EditText
             android:id="@+id/etNameRegUser"
             style="@style/et_registration"
             android:drawableLeft="@mipmap/ic_example"
             android:hint="@string/reg_name"/>
-        <TextView
-            style="@style/tv_registration"
-            android:text="@string/reg_last_name_p"/>
         <EditText
             android:id="@+id/etLastNameOneRegUser"
             style="@style/et_registration"
             android:drawableLeft="@mipmap/ic_example"
-            android:hint="@string/reg_last_name_p"/>
-        <TextView
-            style="@style/tv_registration"
-            android:text="@string/reg_last_name_m"/>
+            android:hint="@string/reg_last_name_one"/>
         <EditText
             android:id="@+id/etLastNameTwoRegUser"
             style="@style/et_registration"
             android:drawableLeft="@mipmap/ic_example"
-            android:hint="@string/reg_last_name_m"/>
-        <TextView
-            style="@style/tv_registration"
-            android:text="@string/reg_direction"/>
+            android:hint="@string/reg_last_name_two"/>
         <EditText
-            android:id="@+id/etAdressRegUser"
+            android:id="@+id/etEmailRegUser"
             style="@style/et_registration"
             android:drawableLeft="@mipmap/ic_example"
-            android:hint="@string/reg_direction"/>
-
-
-        <TextView
-            style="@style/tv_registration"
-            android:text="@string/reg_user_type"/>
+            android:hint="@string/reg_eMail"/>
+        <EditText
+            android:id="@+id/etPasswordUser"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_password"/>
         <EditText
             android:id="@+id/etPositionRegUser"
             style="@style/et_registration"
             android:drawableLeft="@mipmap/ic_example"
-            android:hint="@string/reg_user_type"/>
-        <TextView
-            style="@style/tv_registration"
-            android:text="@string/reg_phone"/>
+            android:hint="@string/reg_position"/>
         <EditText
-            android:id="@+id/etPhoneRegUser"
+            android:id="@+id/etNickNameRegUser"
             style="@style/et_registration"
             android:drawableLeft="@mipmap/ic_example"
-            android:hint="@string/reg_phone"/>
+            android:hint="@string/reg_nickname"/>
+        <EditText
+            android:id="@+id/etOfficePhoneRegUser"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_officePhone"/>
+        <EditText
+            android:id="@+id/etCellPhoneRegUser"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_cellPhone"/>
+        <EditText
+            android:id="@+id/etWebSiteRegUser"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_webSite"/>
+        <EditText
+            android:id="@+id/etFaxRegUser"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_fax"/>
+        <EditText
+            android:id="@+id/etBirthdateRegUser"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_birthdate"/>
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

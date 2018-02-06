@@ -35,7 +35,7 @@
             style="@style/editxt_log"
             android:drawableLeft="@mipmap/ic_launcher"
             android:hint="@string/email_log"
-            android:text="prom"
+            android:text="ninjasystemsmexico@gmail.com"
             android:maxLines="1"
             android:textColor="@color/white"
             />
@@ -45,7 +45,7 @@
             style="@style/editxt_log"
             android:inputType="textPassword"
             android:maxLines="1"
-            android:text="abc"
+            android:text="ninja123"
             android:layout_marginTop="20dp"
             android:textColor="@color/white"
             android:drawableLeft="@mipmap/ic_launcher"

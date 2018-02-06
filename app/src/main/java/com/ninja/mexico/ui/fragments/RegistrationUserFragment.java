@@ -27,7 +27,9 @@ import java.util.ArrayList;
 
 
 public class RegistrationUserFragment extends Fragment {
-    private EditText etNameRegUser, etLastNameOneRegUser, etLastNameTwoRegUser, etAdressRegUser, etPositionRegUser, etPhoneRegUser;
+    private EditText etNameRegUser, etLastNameOneRegUser, etLastNameTwoRegUser, etEmailRegUser;
+    private EditText etPasswordUser, etPositionRegUser, etNickNameRegUser, etOfficePhoneRegUser;
+    private EditText etCellPhoneRegUser, etWebSiteRegUser, etFaxRegUser, etBirthdateRegUser;
     private Spinner spTypePerfilRegUser;
     private Button btnRegisterRegUser;
 
@@ -46,16 +48,24 @@ public class RegistrationUserFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View viewFragment = inflater.inflate(R.layout.fragment_registration_user, container, false);
-        etNameRegUser = viewFragment.findViewById(R.id.etNameRegUser);
-        etLastNameOneRegUser = viewFragment.findViewById(R.id.etLastNameOneRegUser);
-        etLastNameTwoRegUser = viewFragment.findViewById(R.id.etLastNameTwoRegUser);
-        etAdressRegUser = viewFragment.findViewById(R.id.etAdressRegUser);
-        etPositionRegUser = viewFragment.findViewById(R.id.etPositionRegUser);
-        etPhoneRegUser = viewFragment.findViewById(R.id.etPhoneRegUser);
+
+        etNameRegUser=viewFragment.findViewById(R.id.etNameRegUser);
+        etLastNameOneRegUser=viewFragment.findViewById(R.id.etLastNameOneRegUser);
+        etLastNameTwoRegUser=viewFragment.findViewById(R.id.etLastNameTwoRegUser);
+        etEmailRegUser=viewFragment.findViewById(R.id.etEmailRegUser);
+        etPasswordUser=viewFragment.findViewById(R.id.etPasswordUser);
+        etPositionRegUser=viewFragment.findViewById(R.id.etPositionRegUser);
+        etNickNameRegUser=viewFragment.findViewById(R.id.etNickNameRegUser);
+        etOfficePhoneRegUser=viewFragment.findViewById(R.id.etOfficePhoneRegUser);
+        etCellPhoneRegUser=viewFragment.findViewById(R.id.etCellPhoneRegUser);
+        etWebSiteRegUser=viewFragment.findViewById(R.id.etWebSiteRegUser);
+        etFaxRegUser=viewFragment.findViewById(R.id.etFaxRegUser);
+        etBirthdateRegUser=viewFragment.findViewById(R.id.etBirthdateRegUser);
+
         spTypePerfilRegUser = viewFragment.findViewById(R.id.spTypePerfilRegUser);
         btnRegisterRegUser = viewFragment.findViewById(R.id.btnRegisterRegUser);
 
-        ArrayList<UserProfile> listProfiles= HelperProfile.getListProfiles();
+        ArrayList<UserProfile> listProfiles = HelperProfile.getListProfiles();
         ArrayAdapter<UserProfile> adapterProfiles = new ArrayAdapter<UserProfile>(getContext(), android.R.layout.simple_spinner_item, listProfiles);
         adapterProfiles.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spTypePerfilRegUser.setAdapter(adapterProfiles);
@@ -64,25 +74,36 @@ public class RegistrationUserFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 boolean isCreatedUser = false;
-                String position = etPositionRegUser.getText().toString().trim();
-                String adress = etAdressRegUser.getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
+//                String  = .getText().toString().trim();
 
                 if (isCorrectDataEditText()) {
                     UserProfile profileSelected = (UserProfile) spTypePerfilRegUser.getSelectedItem();
                     UserCRUD userCRUD = UserCRUD.getInstance(getContext());
 
-                    isCreatedUser = userCRUD.createUsuario(
-                            new UserApp(
-                                    0,
-                                    etNameRegUser.getText().toString().trim(),
-                                    "a",
-                                    profileSelected.getTypeUser(),
-                                    etNameRegUser.getText().toString().trim(),
-                                    etLastNameOneRegUser.getText().toString().trim(),
-                                    etLastNameTwoRegUser.getText().toString().trim(),
-                                    etPhoneRegUser.getText().toString().trim()
-                            )
-                    );
+//                    isCreatedUser = userCRUD.createUsuario(
+//                            new UserApp(
+//                                    0,
+//                                    etNameRegUser.getText().toString().trim(),
+//                                    "a",
+//                                    profileSelected.getTypeUser(),
+//                                    etNameRegUser.getText().toString().trim(),
+//                                    etLastNameOneRegUser.getText().toString().trim(),
+//                                    etLastNameTwoRegUser.getText().toString().trim();
+//                            )
+//                    );
 
 
                 }
@@ -102,17 +123,16 @@ public class RegistrationUserFragment extends Fragment {
     }
 
     public boolean isCorrectDataEditText() {
-        UtilitiesFormEditText validationForm = new UtilitiesFormEditText(getContext());
-        if (validationForm.isCorrectDataEditText(etNameRegUser, ConstantesLyonCRM.TEXT_TYPE_CHARACTER) &&
-                validationForm.isCorrectDataEditText(etLastNameOneRegUser, ConstantesLyonCRM.TEXT_TYPE_CHARACTER) &&
-                validationForm.isCorrectDataEditText(etLastNameTwoRegUser, ConstantesLyonCRM.TEXT_TYPE_CHARACTER) &&
-                validationForm.isCorrectDataEditText(etAdressRegUser, ConstantesLyonCRM.TEXT_TYPE_CHARACTER) &&
-                validationForm.isCorrectDataEditText(etPositionRegUser, ConstantesLyonCRM.TEXT_TYPE_CHARACTER) &&
-                validationForm.isCorrectDataEditText(etPhoneRegUser, ConstantesLyonCRM.TEXT_TYPE_CHARACTER)) {
-            return true;
-        } else {
+//        UtilitiesFormEditText validationForm = new UtilitiesFormEditText(getContext());
+//        if (validationForm.isCorrectDataEditText(etNameRegUser, ConstantesLyonCRM.TEXT_TYPE_CHARACTER) &&
+//                validationForm.isCorrectDataEditText(etLastNameOneRegUser, ConstantesLyonCRM.TEXT_TYPE_CHARACTER) &&
+//                validationForm.isCorrectDataEditText(etLastNameTwoRegUser, ConstantesLyonCRM.TEXT_TYPE_CHARACTER) &&
+//
+//                {
+//            return true;
+//        } else {
             return false;
-        }
+//        }
 
     }
 }
