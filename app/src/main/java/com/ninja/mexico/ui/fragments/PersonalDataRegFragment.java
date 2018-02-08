@@ -1,8 +1,6 @@
 package com.ninja.mexico.ui.fragments;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -16,25 +14,22 @@ import android.widget.Toast;
 
 import com.ninja.mexico.database.cruds.UserCRUD;
 import com.ninja.mexico.helpers.HelperProfile;
-import com.ninja.mexico.infraestructure.ConstantesLyonCRM;
-import com.ninja.mexico.model.UserApp;
 import com.ninja.mexico.model.UserProfile;
 import com.ninja.mexico.ui.activity.ManagerActivity;
 import com.ninja.mexico.ui.activity.R;
-import com.ninja.mexico.utils.utils_ui.UtilitiesFormEditText;
 
 import java.util.ArrayList;
 
 
-public class RegistrationUserFragment extends Fragment {
+public class PersonalDataRegFragment extends Fragment {
     private EditText etNameRegUser, etLastNameOneRegUser, etLastNameTwoRegUser, etEmailRegUser;
     private EditText etPasswordUser, etPositionRegUser, etNickNameRegUser, etOfficePhoneRegUser;
     private EditText etCellPhoneRegUser, etWebSiteRegUser, etFaxRegUser, etBirthdateRegUser;
     private Spinner spTypePerfilRegUser;
     private Button btnRegisterRegUser;
 
-    public static RegistrationUserFragment newInstance(String param1, String param2) {
-        RegistrationUserFragment fragment = new RegistrationUserFragment();
+    public static PersonalDataRegFragment newInstance(String param1, String param2) {
+        PersonalDataRegFragment fragment = new PersonalDataRegFragment();
         return fragment;
     }
 
@@ -47,7 +42,7 @@ public class RegistrationUserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View viewFragment = inflater.inflate(R.layout.fragment_registration_user, container, false);
+        View viewFragment = inflater.inflate(R.layout.fragment_personal_data_reg, container, false);
 
         etNameRegUser=viewFragment.findViewById(R.id.etNameRegUser);
         etLastNameOneRegUser=viewFragment.findViewById(R.id.etLastNameOneRegUser);
@@ -63,7 +58,7 @@ public class RegistrationUserFragment extends Fragment {
         etBirthdateRegUser=viewFragment.findViewById(R.id.etBirthdateRegUser);
 
         spTypePerfilRegUser = viewFragment.findViewById(R.id.spTypePerfilRegUser);
-        btnRegisterRegUser = viewFragment.findViewById(R.id.btnRegisterRegUser);
+//        btnRegisterRegUser = viewFragment.findViewById(R.id.btnRegisterRegUser);
 
         ArrayList<UserProfile> listProfiles = HelperProfile.getListProfiles();
         ArrayAdapter<UserProfile> adapterProfiles = new ArrayAdapter<UserProfile>(getContext(), android.R.layout.simple_spinner_item, listProfiles);
@@ -74,20 +69,6 @@ public class RegistrationUserFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 boolean isCreatedUser = false;
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
-//                String  = .getText().toString().trim();
 
                 if (isCorrectDataEditText()) {
                     UserProfile profileSelected = (UserProfile) spTypePerfilRegUser.getSelectedItem();

@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ninja.mexico.ui.fragments.AddressRegFragment">
+
+    <EditText
+        android:id="@+id/etStreetAddressUser"
+        style="@style/et_registration"
+        android:drawableLeft="@mipmap/ic_example"
+        android:hint="@string/reg_address_street"/>
+
+    <EditText
+        android:id="@+id/etCologneAddressUser"
+        style="@style/et_registration"
+        android:drawableLeft="@mipmap/ic_example"
+        android:hint="@string/reg_address_cologne"/>
+
+
+    <EditText
+        android:id="@+id/etPostalCodeAddressUser"
+        style="@style/et_registration"
+        android:drawableLeft="@mipmap/ic_example"
+        android:hint="@string/reg_address_postalCode"/>
+
+    <EditText
+        android:id="@+id/etOutdoorNumberAddressUser"
+        style="@style/et_registration"
+        android:drawableLeft="@mipmap/ic_example"
+        android:hint="@string/reg_address_outdoorNumber"/>
+
+    <EditText
+        android:id="@+id/etInteriorNumberAddressUser"
+        style="@style/et_registration"
+        android:drawableLeft="@mipmap/ic_example"
+        android:hint="@string/reg_address_interiorNumber"/>
+
+    <EditText
+        android:id="@+id/etCityAddressUser"
+        style="@style/et_registration"
+        android:drawableLeft="@mipmap/ic_example"
+        android:hint="@string/reg_address_city"/>
+
+    <EditText
+        android:id="@+id/etStateAddressUser"
+        style="@style/et_registration"
+        android:drawableLeft="@mipmap/ic_example"
+        android:hint="@string/reg_address_state"/>
+
+    <EditText
+        android:id="@+id/etCountryAddressUser"
+        style="@style/et_registration"
+        android:drawableLeft="@mipmap/ic_example"
+        android:hint="@string/reg_address_country"/>
+    <LinearLayout
+        style="@style/matchparent"
+        android:orientation="horizontal">
+        <Button
+            style="@style/wrap_wrap"
+            android:layout_weight="1"/>
+        <Button
+            style="@style/wrap_wrap"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

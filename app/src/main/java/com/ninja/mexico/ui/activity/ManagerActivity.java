@@ -1,6 +1,5 @@
 package com.ninja.mexico.ui.activity;
 
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -14,7 +13,7 @@ import android.view.Gravity;
 import android.view.MenuItem;
 
 import com.ninja.mexico.ui.fragments.RegisterVisitFragment;
-import com.ninja.mexico.ui.fragments.RegistrationUserFragment;
+import com.ninja.mexico.ui.fragments.PersonalDataRegFragment;
 
 public class ManagerActivity extends AppCompatActivity   {
     DrawerLayout drawerLytManager;
@@ -45,7 +44,7 @@ public class ManagerActivity extends AppCompatActivity   {
                         fragmentClass = RegisterVisitFragment.class;
                         break;
                     case R.id.mn_user_man:
-                        fragmentClass = RegistrationUserFragment.class;
+                        fragmentClass = PersonalDataRegFragment.class;
                         break;
                     case R.id.mn_sesion_man:
 //                        fragmentClass = .class;

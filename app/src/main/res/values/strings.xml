@@ -10,6 +10,9 @@
     <string name="msg_field_must_text">El campo debe de ser texto</string>
     <string name="msg_field_must_email">El campo debe de ser email</string>
     <string name="msg_field_must_alphanumeric">El campo debe de ser alfanumerico</string>
+    <string name="next">Siguiente</string>
+    <string name="back">Atras</string>
+
 
     <!-- Login -->
     <string name="welcome_log">Ninja Systems</string>
@@ -40,6 +43,27 @@
     <string name="reg_register">Registrar</string>
     <string name="reg_user_save_correct">El usuario se alameceno correctamente</string>
     <string name="reg_user_save_incorrect">El usuario no se pudo almacenar</string>
+
+    <string name="reg_address_street">Calle</string>
+    <string name="reg_address_cologne">Colonia</string>
+    <string name="reg_address_postalCode">Código postal</string>
+    <string name="reg_address_outdoorNumber">Numero Exterior</string>
+    <string name="reg_address_interiorNumber">Numero Interior</string>
+    <string name="reg_address_city">Ciudad</string>
+    <string name="reg_address_state">Estado</string>
+    <string name="reg_address_country">País</string>
+
+
+    <string name="reg_socialnet_facebook">Facebook</string>
+    <string name="reg_socialnet_twitter">Twitter</string>
+    <string name="reg_socialnet_instagram">Instagram</string>
+    <string name="reg_socialnet_google">Google</string>
+
+
+    <string name="reg_regioncof_language">Idioma</string>
+    <string name="reg_regioncof_regional_config_country">País</string>
+    <string name="reg_regioncof_time_format">Formato de hora</string>
+    <string name="reg_regioncof_time_zone">Zona Horaria</string>
 
 
     <string name="reg_vis_title">Registro visita</string>

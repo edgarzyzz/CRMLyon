@@ -6,16 +6,16 @@ package com.ninja.mexico.model.user_crm;
 
 public class RegionalConfigurationUserCrm {
     String language;
-    String country;
+    String regionalConfigCountry;
     String timeFormat;
     String timeZone;
 
     public RegionalConfigurationUserCrm() {
     }
 
-    public RegionalConfigurationUserCrm(String language, String country, String timeFormat, String timeZone) {
+    public RegionalConfigurationUserCrm(String language, String regionalConfigCountry, String timeFormat, String timeZone) {
         this.language = language;
-        this.country = country;
+        this.regionalConfigCountry = regionalConfigCountry;
         this.timeFormat = timeFormat;
         this.timeZone = timeZone;
     }
@@ -28,12 +28,12 @@ public class RegionalConfigurationUserCrm {
         this.language = language;
     }
 
-    public String getCountry() {
-        return country;
+    public String getRegionalConfigCountry() {
+        return regionalConfigCountry;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
+    public void setRegionalConfigCountry(String regionalConfigCountry) {
+        this.regionalConfigCountry = regionalConfigCountry;
     }
 
     public String getTimeFormat() {

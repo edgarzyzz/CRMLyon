@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ninja.mexico.ui.fragments.RegionalConfigRegFragment">
+
+    <EditText
+        android:id="@+id/etLanguageRegionConfigReg"
+        style="@style/et_registration"
+        android:drawableLeft="@mipmap/ic_example"
+        android:hint="@string/reg_regioncof_language" />
+
+
+    <EditText
+        android:id="@+id/etCountryRegionConfigReg"
+        style="@style/et_registration"
+        android:drawableLeft="@mipmap/ic_example"
+        android:hint="@string/reg_regioncof_regional_config_country" />
+
+
+    <EditText
+        android:id="@+id/etTimeFormatRegionConfigReg"
+        style="@style/et_registration"
+        android:drawableLeft="@mipmap/ic_example"
+        android:hint="@string/reg_regioncof_time_format" />
+
+
+    <EditText
+        android:id="@+id/etTimeZoneRegionConfigReg"
+        style="@style/et_registration"
+        android:drawableLeft="@mipmap/ic_example"
+        android:hint="@string/reg_regioncof_time_zone" />
+
+
+
+
+
+</LinearLayout>
