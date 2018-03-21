@@ -113,12 +113,18 @@
 
     </LinearLayout>
     <LinearLayout
-        style="@style/matchparent"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
         <Button
-            android:id="@+id/btnRegisterRegUser"
+            android:id="@+id/btnNextPersonal"
             style="@style/buttonLyon"
-            android:text="@string/reg_register"/>
+            android:text="cancel"/>
+
+        <Button
+            android:id="@+id/btnBackPersonal"
+            style="@style/buttonLyon"
+            android:text="next"/>
 
     </LinearLayout>
 

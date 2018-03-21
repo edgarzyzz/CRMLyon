@@ -4,33 +4,57 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.ninja.mexico.ui.fragments.RegionalConfigRegFragment">
-
-    <EditText
-        android:id="@+id/etLanguageRegionConfigReg"
-        style="@style/et_registration"
-        android:drawableLeft="@mipmap/ic_example"
-        android:hint="@string/reg_regioncof_language" />
-
-
-    <EditText
-        android:id="@+id/etCountryRegionConfigReg"
-        style="@style/et_registration"
-        android:drawableLeft="@mipmap/ic_example"
-        android:hint="@string/reg_regioncof_regional_config_country" />
+    <LinearLayout
+        style="@style/matchparent"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/etLanguageRegionConfigReg"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_regioncof_language" />
 
 
-    <EditText
-        android:id="@+id/etTimeFormatRegionConfigReg"
-        style="@style/et_registration"
-        android:drawableLeft="@mipmap/ic_example"
-        android:hint="@string/reg_regioncof_time_format" />
+        <EditText
+            android:id="@+id/etCountryRegionConfigReg"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_regioncof_regional_config_country" />
 
 
-    <EditText
-        android:id="@+id/etTimeZoneRegionConfigReg"
-        style="@style/et_registration"
-        android:drawableLeft="@mipmap/ic_example"
-        android:hint="@string/reg_regioncof_time_zone" />
+        <EditText
+            android:id="@+id/etTimeFormatRegionConfigReg"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_regioncof_time_format" />
+
+
+        <EditText
+            android:id="@+id/etTimeZoneRegionConfigReg"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_regioncof_time_zone" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnBackRegional"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Atras"/>
+        <Button
+            android:id="@+id/btnNextRegional"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="siguiente"/>
+
+    </LinearLayout>
 
 
 

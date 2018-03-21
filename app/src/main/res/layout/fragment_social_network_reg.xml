@@ -5,29 +5,57 @@
     android:orientation="vertical"
     tools:context="com.ninja.mexico.ui.fragments.SocialNetworkRegFragment">
 
-    <EditText
-        android:id="@+id/etFacebookSocialNetReg"
-        style="@style/et_registration"
-        android:drawableLeft="@mipmap/ic_example"
-        android:hint="@string/reg_socialnet_facebook" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/etFacebookSocialNetReg"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_socialnet_facebook" />
 
-    <EditText
-        android:id="@+id/etTwitterSocialNetReg"
-        style="@style/et_registration"
-        android:drawableLeft="@mipmap/ic_example"
-        android:hint="@string/reg_socialnet_twitter" />
+        <EditText
+            android:id="@+id/etTwitterSocialNetReg"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_socialnet_twitter" />
 
-    <EditText
-        android:id="@+id/etInstagramSocialNetReg"
-        style="@style/et_registration"
-        android:drawableLeft="@mipmap/ic_example"
-        android:hint="@string/reg_socialnet_instagram" />
+        <EditText
+            android:id="@+id/etInstagramSocialNetReg"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_socialnet_instagram" />
 
-    <EditText
-        android:id="@+id/etGoogleSocialNetReg"
-        style="@style/et_registration"
-        android:drawableLeft="@mipmap/ic_example"
-        android:hint="@string/reg_socialnet_google" />
+        <EditText
+            android:id="@+id/etGoogleSocialNetReg"
+            style="@style/et_registration"
+            android:drawableLeft="@mipmap/ic_example"
+            android:hint="@string/reg_socialnet_google" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnBackSocial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Atras"/>
+        <Button
+            android:id="@+id/btnNextSocial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="siguiente"/>
+
+    </LinearLayout>
+
+
 
 
 </LinearLayout>

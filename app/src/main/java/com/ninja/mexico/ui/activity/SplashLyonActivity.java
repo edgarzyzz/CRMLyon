@@ -34,9 +34,6 @@ public class SplashLyonActivity extends AppCompatActivity {
         dataFirebase = FirebaseDatabase.getInstance().getReference();
 
 
-
-
-//
 //        authFirebase.signInWithEmailAndPassword("ninjasystemsmexico@gmail.com", "ninja123")
 //                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 //                    @Override
@@ -65,29 +62,27 @@ public class SplashLyonActivity extends AppCompatActivity {
 //                });
 //
 //
-
-
-
-        startDummyDB();
-
+//
+//
+//
+//        startDummyDB();
+//
 //
 //        Handler handler = new Handler();
 //        handler.postDelayed(new Runnable() {
 //            @Override
 //            public void run() {
-//                Intent intent = null;
+                Intent intent = null;
 //                if (authFirebase.getCurrentUser()!=null){
 //                    authFirebase.getCurrentUser().getUid();
 //                    intent = new Intent(SplashLyonActivity.this, LoginActivity.class);
 //                }else{
-//                    intent = new Intent(SplashLyonActivity.this, LoginActivity.class);
+        intent = new Intent(SplashLyonActivity.this, LoginActivity.class);
 //
 //                }
-//                startActivity(intent);
-//
-//
-//
-//
+        startActivity(intent);
+
+
 //            }
 //        }, 1000);
 
@@ -158,8 +153,7 @@ public class SplashLyonActivity extends AppCompatActivity {
     }
 
 
-
-    private void getIntentFromProfile(String uidFirebase){
+    private void getIntentFromProfile(String uidFirebase) {
 //        dataFirebase.child("").getDatabase().get
     }
 }

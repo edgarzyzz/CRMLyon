@@ -1,10 +1,14 @@
 package com.ninja.mexico.model.user_crm;
 
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
 /**
  * Created by jorge on 05/02/2018.
  */
 
-public class SocialNetworksUserDrm {
+public class SocialNetworksUserDrm implements Serializable {
     String facebook;
     String twitter;
     String instagram;

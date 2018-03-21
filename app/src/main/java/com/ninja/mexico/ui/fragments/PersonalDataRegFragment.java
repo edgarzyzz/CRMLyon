@@ -1,6 +1,6 @@
 package com.ninja.mexico.ui.fragments;
 
-import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,12 +10,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
-import com.ninja.mexico.database.cruds.UserCRUD;
 import com.ninja.mexico.helpers.HelperProfile;
 import com.ninja.mexico.model.UserProfile;
-import com.ninja.mexico.ui.activity.ManagerActivity;
+import com.ninja.mexico.model.user_crm.PersonalDataUserCrm;
 import com.ninja.mexico.ui.activity.R;
 
 import java.util.ArrayList;
@@ -26,11 +24,18 @@ public class PersonalDataRegFragment extends Fragment {
     private EditText etPasswordUser, etPositionRegUser, etNickNameRegUser, etOfficePhoneRegUser;
     private EditText etCellPhoneRegUser, etWebSiteRegUser, etFaxRegUser, etBirthdateRegUser;
     private Spinner spTypePerfilRegUser;
-    private Button btnRegisterRegUser;
+    private Button btnNextPersonal;
+    private Button btnBackPersonal;
+    private OnFragmentPersonalInteraction listenerFgmntPers;
+
 
     public static PersonalDataRegFragment newInstance(String param1, String param2) {
         PersonalDataRegFragment fragment = new PersonalDataRegFragment();
         return fragment;
+    }
+
+    public interface OnFragmentPersonalInteraction{
+        void onFgmntPErsonalInteraction(boolean isBackPressed, PersonalDataUserCrm dataPersonalUser);
     }
 
     @Override
@@ -41,7 +46,6 @@ public class PersonalDataRegFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View viewFragment = inflater.inflate(R.layout.fragment_personal_data_reg, container, false);
 
         etNameRegUser=viewFragment.findViewById(R.id.etNameRegUser);
@@ -56,52 +60,66 @@ public class PersonalDataRegFragment extends Fragment {
         etWebSiteRegUser=viewFragment.findViewById(R.id.etWebSiteRegUser);
         etFaxRegUser=viewFragment.findViewById(R.id.etFaxRegUser);
         etBirthdateRegUser=viewFragment.findViewById(R.id.etBirthdateRegUser);
+        btnNextPersonal = viewFragment.findViewById(R.id.btnNextPersonal);
+        btnBackPersonal = viewFragment.findViewById(R.id.btnBackPersonal);
+
 
         spTypePerfilRegUser = viewFragment.findViewById(R.id.spTypePerfilRegUser);
-//        btnRegisterRegUser = viewFragment.findViewById(R.id.btnRegisterRegUser);
 
         ArrayList<UserProfile> listProfiles = HelperProfile.getListProfiles();
         ArrayAdapter<UserProfile> adapterProfiles = new ArrayAdapter<UserProfile>(getContext(), android.R.layout.simple_spinner_item, listProfiles);
         adapterProfiles.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spTypePerfilRegUser.setAdapter(adapterProfiles);
 
-        btnRegisterRegUser.setOnClickListener(new View.OnClickListener() {
+        btnBackPersonal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean isCreatedUser = false;
+                listenerFgmntPers.onFgmntPErsonalInteraction(true,
+                        new PersonalDataUserCrm(
+                                etNameRegUser.getText().toString(),
+                                etLastNameOneRegUser.getText().toString(),
+                                etLastNameTwoRegUser.getText().toString(),
+                                etEmailRegUser.getText().toString(),
+                                etPasswordUser.getText().toString(),
+                                etPositionRegUser.getText().toString(),
+                                etNickNameRegUser.getText().toString(),
+                                etOfficePhoneRegUser.getText().toString(),
+                                etCellPhoneRegUser.getText().toString(),
+                                etWebSiteRegUser.getText().toString(),
+                                etFaxRegUser.getText().toString(),
+                                etBirthdateRegUser.getText().toString()
 
-                if (isCorrectDataEditText()) {
-                    UserProfile profileSelected = (UserProfile) spTypePerfilRegUser.getSelectedItem();
-                    UserCRUD userCRUD = UserCRUD.getInstance(getContext());
-
-//                    isCreatedUser = userCRUD.createUsuario(
-//                            new UserApp(
-//                                    0,
-//                                    etNameRegUser.getText().toString().trim(),
-//                                    "a",
-//                                    profileSelected.getTypeUser(),
-//                                    etNameRegUser.getText().toString().trim(),
-//                                    etLastNameOneRegUser.getText().toString().trim(),
-//                                    etLastNameTwoRegUser.getText().toString().trim();
-//                            )
-//                    );
-
-
-                }
-
-                if (isCreatedUser) {
-                    Toast.makeText(getContext(), getContext().getString(R.string.reg_user_save_correct), Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getContext(), ManagerActivity.class);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(getContext(), getContext().getString(R.string.reg_user_save_incorrect), Toast.LENGTH_SHORT).show();
-                }
+                        ));
             }
+        });
+        btnNextPersonal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listenerFgmntPers.onFgmntPErsonalInteraction(true,
+                        new PersonalDataUserCrm(
+                                etNameRegUser.getText().toString(),
+                                etLastNameOneRegUser.getText().toString(),
+                                etLastNameTwoRegUser.getText().toString(),
+                                etEmailRegUser.getText().toString(),
+                                etPasswordUser.getText().toString(),
+                                etPositionRegUser.getText().toString(),
+                                etNickNameRegUser.getText().toString(),
+                                etOfficePhoneRegUser.getText().toString(),
+                                etCellPhoneRegUser.getText().toString(),
+                                etWebSiteRegUser.getText().toString(),
+                                etFaxRegUser.getText().toString(),
+                                etBirthdateRegUser.getText().toString()
+
+                        ));
+            }
+
         });
 
 
         return viewFragment;
     }
+
+
 
     public boolean isCorrectDataEditText() {
 //        UtilitiesFormEditText validationForm = new UtilitiesFormEditText(getContext());
@@ -115,5 +133,24 @@ public class PersonalDataRegFragment extends Fragment {
             return false;
 //        }
 
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnFragmentPersonalInteraction){
+            listenerFgmntPers = (OnFragmentPersonalInteraction) context;
+        }else{
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+
+
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        listenerFgmntPers =null;
     }
 }
